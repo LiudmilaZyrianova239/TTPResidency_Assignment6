@@ -4,6 +4,7 @@ import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
 import axios from 'axios';
 import AccountBalance from './AccountBalance';
+import './component.css';
 
 class EveryDebit extends Component {
     render() {
@@ -142,20 +143,39 @@ render() {
         <EveryDebit data={elem} key={elem.id}/>
     );   
     return (
-        <div>
-          <h1>Debit</h1> 
-          <div>Username: {this.props.userName}</div>
+    <div>
+            <h1 className= "App-header">Bank of React</h1>
+            <h2 className= "Sub-header">Debit</h2> 
+        <div className = "homePage">  
+          <div className = "button"> 
+                <Link className = "linkText" to="/">Home</Link> 
+          </div> <br/>
+
+          <div>Username: {this.props.userName}</div>  <br/>
           <AccountBalance accountBalance={this.props.accountBalance} debit={this.state.totalDebitArray} credit={this.props.credit}/> <br/>
-          <div>Enter your debit data here: </div>
+          {/*<div>Enter your debit data here: </div>
           <input type='text' value = {this.state.temporaryDescription} onChange={this.handleChangeDesctiption}/>  <br/>
           <input type='text' value = {this.state.temporaryAmount} onChange={this.handleChangeAmount}/>  <br/>
-          <button onClick={this.handleClick}>Add</button> <br/><br/>
-          <div>Your debit data: </div><br/>
-          
-          <ul>{fetchDebit}</ul>
-          <ul>{addedDebit}</ul>
-          <Link to="/">Home</Link> 
-        </div>
+          <button onClick={this.handleClick}>Add</button> <br/><br/> */}
+         <div className = "loginForm">
+                <div>Enter debit data you want to add here: </div>
+                <div >
+                    <div>
+                        <label  htmlFor="userName"></label>
+                        <input type="text" classname="name" value = {this.state.temporaryDescription} onChange={this.handleChangeDesctiption} />
+                    </div>
+                    <div>
+                        <label htmlFor="userName"></label>
+                        <input type="text" classname="name" name="password" value = {this.state.temporaryAmount} onChange={this.handleChangeAmount}/>
+                    </div>
+                    <button className="submit" onClick={this.handleClick}>Add</button>
+                </div>
+        </div><br/> 
+          <h3>Your debit data: </h3>          
+          <ul className= "dataList">{fetchDebit}</ul>
+          <ul className= "dataList">{addedDebit}</ul>
+        </div>  
+    </div>
     );
   }
 }

@@ -4,6 +4,7 @@ import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
 import axios from 'axios';
 import AccountBalance from './AccountBalance';
+import './component.css';
 
 class EveryCredit extends Component {
     render() {
@@ -142,18 +143,32 @@ render() {
     );   
     return (
         <div>
-          <h1>Credit</h1> 
-          <div>Username: {this.props.userName}</div>
+            <h1 className= "App-header">Bank of React</h1>
+            <h2 className= "Sub-header">Credit</h2> 
+        <div className = "homePage">      
+          <div className = "button"> 
+                <Link className = "linkText" to="/">Home</Link> 
+          </div> <br/>
+          <div>Username: {this.props.userName}</div> <br/>
           <AccountBalance accountBalance={this.props.accountBalance} credit={this.state.totalCreditArray} debit={this.props.debit}/> <br/>
-          <div>Enter your credit data here: </div>
-          <input type='text' value = {this.state.temporaryDescription} onChange={this.handleChangeDesctiption}/>  <br/>
-          <input type='text' value = {this.state.temporaryAmount} onChange={this.handleChangeAmount}/>  <br/>
-          <button onClick={this.handleClick}>Add</button> <br/><br/>
-          <div>Your credit data: </div><br/>
-          
-          <ul>{fetchCredit}</ul>
-          <ul>{addedCredit}</ul>
-          <Link to="/">Home</Link> 
+          <div className = "loginForm">
+                <div>Enter credit data you want to add here: </div>
+                <div >
+                    <div>
+                        <label  htmlFor="userName"></label>
+                        <input type="text" classname="name" value = {this.state.temporaryDescription} onChange={this.handleChangeDesctiption} />
+                    </div>
+                    <div>
+                        <label htmlFor="userName"></label>
+                        <input type="text" classname="name" name="password" value = {this.state.temporaryAmount} onChange={this.handleChangeAmount}/>
+                    </div>
+                    <button className="submit" onClick={this.handleClick}>Add</button>
+                </div>
+        </div><br/> 
+        <h3>Your credit data: </h3>          
+          <ul className= "dataList">{fetchCredit}</ul>
+          <ul className= "dataList">{addedCredit}</ul>
+          </div> 
         </div>
     );
   }

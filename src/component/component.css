@@ -1,0 +1,125 @@
+.accountBox {    
+    text-align: left;
+    padding: 0rem 2rem 1rem 1rem;
+    border-radius: 0.5rem;
+    min-width: 9rem;
+    width:15%;
+    border: solid 13px rgba(0, 0, 0, 0.05);
+    background-color: #FDEDEC;
+}
+.accountBoxHeader {
+    margin: auto;
+}
+.App-header {
+    height: 50%;
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 0; 
+    background-color: #282c34;
+    min-height: 10vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+    color: white;
+}
+.Sub-header {
+    height: 50%;
+    width: 100%;
+    margin-top: 0;
+    background-color: #282c34;
+    min-height: 10vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 35px;
+    color: white;
+}
+.homePage {
+    margin: 50px;
+}
+
+
+.button {
+    width: 10%;
+    background-color: white; 
+    color: black; 
+    border: 1px solid #282c34;
+    border-radius: 4px;
+    padding: 1px 1px;
+    text-align: center;
+
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+
+    margin-bottom: 1%;
+  }
+  
+  
+  .button:hover {
+    background-color: #FDEDEC;
+    color: white;
+  }
+  button:focus {outline:0;}
+
+.linkText {
+    text-decoration: none;
+}
+
+
+
+
+/*Login From*/
+input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+input[type=password], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  input[type=text]:focus {outline:0;}
+  input[type=password]:focus {outline:0;}
+  
+ .submit {
+    width: 100%;
+    background-color: #414c61;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+.submit:hover {
+    background-color: #4C4c61;
+  }
+  
+.submit:focus {outline:0;}
+.loginForm {
+    width: 35%;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+  }
+
+/*List with Data*/
+.dataList {
+    list-style-type: square;
+}  
